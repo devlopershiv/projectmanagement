@@ -42,6 +42,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('user/getloggedinuser', [UsersController::class, 'getuser']);
    
 
+    //master
+    Route::post('users/create/update', [UsersController::class, 'userCreateUpdate']);
+    Route::post('users/list', [UsersController::class, 'list']);
+    Route::post('users/details', [UsersController::class, 'details']);
+    Route::post('users_status', [UsersController::class, 'users_status']);
+    Route::post('user/getloggedinuser', [UsersController::class, 'getuser']);
+   
+
      //project
      Route::post('project/create', [ProjectController::class, 'store']);
      Route::post('project/list', [ProjectController::class, 'list']);
